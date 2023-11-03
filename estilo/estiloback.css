@@ -24,12 +24,12 @@ body{
 
 img{
     position: absolute;
-    max-width:300px;
+    max-width:200px;
     margin: auto; 
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(10, 64, 46);
+    
     cursor: pointer;
     z-index: -1;
     transition-property: max-width;
