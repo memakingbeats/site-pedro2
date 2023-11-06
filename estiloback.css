@@ -24,9 +24,9 @@ body{
 
 img{
     position: absolute;
-    max-width:200px;
+    max-width:500px;
     margin: auto; 
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     
@@ -76,8 +76,8 @@ nav.menu a{
 
 nav.menu a:hover {
     letter-spacing: 2px;
-    color: rgb(190, 167, 167);
-    background-color: aquamarine;
+    color: black;
+   
     
     
 }
@@ -180,8 +180,19 @@ nav.socialmedia a:hover{
     
     
     100%{
-        transform: translateX(-10vw) scale(1) rotate(12000deg);
+        transform: translateX(-15vw) scale(1) rotate(12000deg);
           
     }    
 }
   
+@media (max-width: 768px) {
+ 
+
+img{
+    
+    width: 300px;
+    
+}
+
+
+}

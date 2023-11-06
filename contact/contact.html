@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="JC Record Lathes" />
+        <meta name="keywords" content="JC Record Lathes, Rotary" />
+        <meta property="og:title" content="JC Record Lathes website" />
+        <meta property="og:type" content="website" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="/contact/contact.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"
+        ></script>
+        <title>JC Record Lathes</title>
+    </head>
+    <body>
+        <main id="full">
+            <div class="container">
+                <header>
+                    <div class="row">
+                        <!-- Logo on the right side -->
+                        <div class="col-md-6 text-center text-md-right">
+                            <img
+                                src="/imagens/logo3.png"
+                                alt="JC"
+                                class="logo"
+                            />
+                        </div>
+
+                        <!-- Navigation links on the left side -->
+                        <div class="col-md-6">
+                            <nav class="navbar navbar-expand-md navbar-light">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbarNav"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div
+                                    class="collapse navbar-collapse"
+                                    id="navbarNav"
+                                >
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="/back.html"
+                                                >HOME</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="/lathe/lathe.html"
+                                                >RECORD LATHES</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="/rotary/rotary.html"
+                                                >ROTARY</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="/contact/contact.html"
+                                                >CONTACT</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="container contact-container">
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-6">
+                            <h1>Contact Us</h1>
+                            <h3>Get in touch with us</h3>
+
+                            <!-- Add your form here -->
+                            <div id="formStatus"></div>
+                            <form
+                                id="contactForm"
+                                method="POST"
+                                action="send_email.php"
+                            >
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="name"
+                                        name="name"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea
+                                        class="form-control"
+                                        id="message"
+                                        name="message"
+                                        rows="4"
+                                        required
+                                    ></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Right Column (you can keep this empty or add more content) -->
+                        <div class="col-md-6">
+                            <p>
+                                Entre em contato conosco e ficaremos felizes em
+                                esclarecer todas as suas dúvidas sobre os nossos
+                                equipamentos. Nossos mixers rotativos e nossos
+                                tornos de gravação estão à disposição, prontos
+                                para atender às suas necessidades. Não hesite em
+                                nos contatar para obter informações detalhadas
+                                sobre como nossos produtos podem melhorar a
+                                qualidade e eficiência do seu trabalho. Estamos
+                                ansiosos para ajudá-lo a encontrar a solução
+                                perfeita para os seus projetos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+                event.preventDefault();
+
+                // Add your validation logic here
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var message = $("#message").val();
+
+                if (name === "" || email === "" || message === "") {
+                    alert("Please fill out all fields.");
+                    return;
+                }
+
+                // If validation is successful, submit the form
+                this.submit();
+            });
+        });
+    </script>
+</html>
