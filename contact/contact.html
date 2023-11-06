@@ -162,26 +162,4 @@
             </div>
         </main>
     </body>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#contactForm").submit(function (event) {
-                event.preventDefault();
-
-                // Add your validation logic here
-                var name = $("#name").val();
-                var email = $("#email").val();
-                var message = $("#message").val();
-
-                if (name === "" || email === "" || message === "") {
-                    alert("Please fill out all fields.");
-                    return;
-                }
-
-                // If validation is successful, submit the form
-                this.submit();
-            });
-        });
-    </script>
 </html>
