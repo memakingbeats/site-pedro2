@@ -289,7 +289,7 @@
                         <div class="audio-container">
                             <p>Audio 1 - Memaking</p>
                             <p class="space"><span id="diamontTest"></span></p>
-                            <audio controls>
+                            <audio id="audio1" controls>
                                 <source
                                     src="../audios/Ranjizz - People.wav"
                                     type="audio/mp3"
@@ -297,7 +297,7 @@
                                 Your browser does not support the audio tag.
                             </audio>
                             <p class="space2"><span id="carbideTest"></span></p>
-                            <audio controls>
+                            <audio id="audio2" controls>
                                 <source
                                     src="../audios/Ranjizz - Preference.wav"
                                     type="audio/mp3"
@@ -310,7 +310,7 @@
                         <div class="audio-container">
                             <p class="subt">Audio 2 - Ranjizz</p>
                             <p class="space"><span id="diamontTest2"></span></p>
-                            <audio controls>
+                            <audio id="audio3" controls>
                                 <source
                                     src="../audios/Ranjizz - Roll.wav"
                                     type="audio/mp3"
@@ -320,7 +320,7 @@
                             <p class="space2">
                                 <span id="carbideTest2"></span>
                             </p>
-                            <audio controls>
+                            <audio id="audio4" controls>
                                 <source
                                     src="../audios/Ranjizz - Sunday.wav"
                                     type="audio/mp3"
@@ -328,11 +328,12 @@
                                 Your browser does not support the audio tag.
                             </audio>
                         </div>
+
                         <!-- Audio 3 -->
                         <div class="audio-container">
                             <p class="subt">Audio 3 - Fabio Ape</p>
                             <p class="space"><span id="diamontTest3"></span></p>
-                            <audio controls>
+                            <audio id="audio5" controls>
                                 <source
                                     src="../audios/Ranjizz - ZzZ.wav"
                                     type="audio/mp3"
@@ -342,7 +343,7 @@
                             <p class="space2">
                                 <span id="carbideTest3"></span>
                             </p>
-                            <audio controls>
+                            <audio id="audio6" controls>
                                 <source
                                     src="../audios/Ranjizz -BR48-.wav"
                                     type="audio/mp3"
@@ -355,6 +356,54 @@
             </div>
         </main>
     </body>
+    <!-- Add this script to your HTML file -->
+
+    <script>
+        let currentlyPlaying = null;
+
+        function playAudio(audioId) {
+            const audio = document.getElementById(audioId);
+
+            if (currentlyPlaying && currentlyPlaying !== audio) {
+                currentlyPlaying.pause();
+                // Store the current playback position in localStorage
+                localStorage.setItem(
+                    currentlyPlaying.id,
+                    currentlyPlaying.currentTime
+                );
+            }
+
+            currentlyPlaying = audio;
+
+            // Retrieve the stored playback position from localStorage
+            const storedTime = localStorage.getItem(audio.id);
+            if (storedTime) {
+                audio.currentTime = parseFloat(storedTime);
+            }
+
+            audio.play();
+        }
+
+        // Add event listeners for each audio element
+        document
+            .getElementById("audio1")
+            .addEventListener("play", () => playAudio("audio1"));
+        document
+            .getElementById("audio2")
+            .addEventListener("play", () => playAudio("audio2"));
+        document
+            .getElementById("audio3")
+            .addEventListener("play", () => playAudio("audio3"));
+        document
+            .getElementById("audio4")
+            .addEventListener("play", () => playAudio("audio4"));
+        document
+            .getElementById("audio5")
+            .addEventListener("play", () => playAudio("audio5"));
+        document
+            .getElementById("audio6")
+            .addEventListener("play", () => playAudio("audio6"));
+    </script>
 
     <script>
         function changeLanguage() {
