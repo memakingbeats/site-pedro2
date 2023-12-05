@@ -56,7 +56,7 @@
                     "Estes são os cortes de teste que fizemos para demonstrar a qualidade dos nossos cortes.",
                 carbideTest: "Agulha de Carbide",
                 carbideTest2: "Agulha de Carbide",
-                carbideTest2: "Agulha de Carbide",
+                carbideTest3: "Agulha de Carbide",
             };
         </script>
 
@@ -146,12 +146,17 @@
             }
 
             .audio-container {
-                width: 50%;
+                max-width: 600px; /* Adjust the maximum width as needed */
                 margin: auto;
                 margin-top: 20px;
+                text-align: center; /* Center the content inside the audio container */
+                margin-bottom: 20px;
             }
 
             @media (max-width: 768px) {
+                .audio-container {
+                    width: 80%; /* Adjust the width for smaller screens */
+                }
             }
         </style>
         <title>JC Record Lathes</title>
@@ -254,7 +259,7 @@
                             <p><span id="diamontTest"></span></p>
                             <audio controls>
                                 <source
-                                    src="path/to/audio1.mp3"
+                                    src="/audios/Ranjizz - People.wav"
                                     type="audio/mp3"
                                 />
                                 Your browser does not support the audio tag.
@@ -262,7 +267,7 @@
                             <p><span id="carbideTest"></span></p>
                             <audio controls>
                                 <source
-                                    src="path/to/audio2.mp3"
+                                    src="/audios/Ranjizz - Preference.wav"
                                     type="audio/mp3"
                                 />
                                 Your browser does not support the audio tag.
@@ -275,7 +280,7 @@
                             <p><span id="diamontTest2"></span></p>
                             <audio controls>
                                 <source
-                                    src="path/to/audio1.mp3"
+                                    src="/audios/Ranjizz - Roll.wav"
                                     type="audio/mp3"
                                 />
                                 Your browser does not support the audio tag.
@@ -283,7 +288,7 @@
                             <p><span id="carbideTest2"></span></p>
                             <audio controls>
                                 <source
-                                    src="path/to/audio2.mp3"
+                                    src="/audios/Ranjizz - Sunday.wav"
                                     type="audio/mp3"
                                 />
                                 Your browser does not support the audio tag.
@@ -295,7 +300,7 @@
                             <p><span id="diamontTest3"></span></p>
                             <audio controls>
                                 <source
-                                    src="path/to/audio1.mp3"
+                                    src="/audios/Ranjizz - ZzZ.wav"
                                     type="audio/mp3"
                                 />
                                 Your browser does not support the audio tag.
@@ -303,7 +308,7 @@
                             <p><span id="carbideTest3"></span></p>
                             <audio controls>
                                 <source
-                                    src="path/to/audio2.mp3"
+                                    src="/audios/Ranjizz -BR48-.wav"
                                     type="audio/mp3"
                                 />
                                 Your browser does not support the audio tag.
