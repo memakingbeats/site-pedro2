@@ -73,7 +73,7 @@
             }
 
             body {
-                min-height: 100vh;
+                min-height: 120vh;
                 background-color: white;
             }
 
@@ -136,7 +136,6 @@
             }
             .recordings-section {
                 text-align: center; /* Center the text */
-                margin-top: 40px;
             }
 
             .recordings-section h2,
@@ -148,14 +147,24 @@
             .audio-container {
                 max-width: 600px; /* Adjust the maximum width as needed */
                 margin: auto;
-                margin-top: 20px;
+
                 text-align: center; /* Center the content inside the audio container */
-                margin-bottom: 20px;
             }
 
             @media (max-width: 768px) {
                 .audio-container {
                     width: 80%; /* Adjust the width for smaller screens */
+                }
+                img {
+                    position: absolute;
+                    max-width: 150px;
+                    margin: auto;
+                    top: 30px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    cursor: pointer;
+                    z-index: -1;
                 }
             }
         </style>
