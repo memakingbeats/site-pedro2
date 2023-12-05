@@ -357,7 +357,6 @@
         </main>
     </body>
     <!-- Add this script to your HTML file -->
-
     <script>
         let currentlyPlaying = null;
 
@@ -384,6 +383,22 @@
             audio.play();
         }
 
+        function updatePlaybackPosition(audio) {
+            // Update the stored playback position in localStorage during playback
+            localStorage.setItem(audio.id, audio.currentTime);
+        }
+
+        function updatePlaybackPositionOnClick(audio, event) {
+            const progress = event.offsetX / event.target.clientWidth;
+            audio.currentTime = audio.duration * progress;
+            updatePlaybackPosition(audio);
+        }
+
+        // Clear stored playback positions when the page is loaded
+        window.onload = function () {
+            localStorage.clear();
+        };
+
         // Add event listeners for each audio element
         document
             .getElementById("audio1")
@@ -403,6 +418,70 @@
         document
             .getElementById("audio6")
             .addEventListener("play", () => playAudio("audio6"));
+
+        // Add timeupdate event listeners to update the playback position
+        document
+            .getElementById("audio1")
+            .addEventListener("timeupdate", () =>
+                updatePlaybackPosition(audio1)
+            );
+        document
+            .getElementById("audio2")
+            .addEventListener("timeupdate", () =>
+                updatePlaybackPosition(audio2)
+            );
+        document
+            .getElementById("audio3")
+            .addEventListener("timeupdate", () =>
+                updatePlaybackPosition(audio3)
+            );
+        document
+            .getElementById("audio4")
+            .addEventListener("timeupdate", () =>
+                updatePlaybackPosition(audio4)
+            );
+        document
+            .getElementById("audio5")
+            .addEventListener("timeupdate", () =>
+                updatePlaybackPosition(audio5)
+            );
+        document
+            .getElementById("audio6")
+            .addEventListener("timeupdate", () =>
+                updatePlaybackPosition(audio6)
+            );
+
+        // Add click event listeners to update playback position on click
+        document
+            .getElementById("audio1")
+            .addEventListener("click", (event) =>
+                updatePlaybackPositionOnClick(audio1, event)
+            );
+        document
+            .getElementById("audio2")
+            .addEventListener("click", (event) =>
+                updatePlaybackPositionOnClick(audio2, event)
+            );
+        document
+            .getElementById("audio3")
+            .addEventListener("click", (event) =>
+                updatePlaybackPositionOnClick(audio3, event)
+            );
+        document
+            .getElementById("audio4")
+            .addEventListener("click", (event) =>
+                updatePlaybackPositionOnClick(audio4, event)
+            );
+        document
+            .getElementById("audio5")
+            .addEventListener("click", (event) =>
+                updatePlaybackPositionOnClick(audio5, event)
+            );
+        document
+            .getElementById("audio6")
+            .addEventListener("click", (event) =>
+                updatePlaybackPositionOnClick(audio6, event)
+            );
     </script>
 
     <script>
