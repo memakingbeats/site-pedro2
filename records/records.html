@@ -80,7 +80,7 @@
             .container {
                 position: relative;
                 width: 100vw;
-                height: 100vh;
+                height: 150vh;
                 overflow: hidden;
             }
 
@@ -138,10 +138,26 @@
                 text-align: center; /* Center the text */
             }
 
-            .recordings-section h2,
-            .recordings-section p {
+            .recordings-section h2 {
                 margin: auto; /* Center the element */
                 max-width: 600px; /* Adjust the maximum width as needed */
+                font-weight: bold;
+                margin-top: 50px;
+            }
+            .recordings-section .record {
+                margin: auto; /* Center the element */
+                max-width: 600px; /* Adjust the maximum width as needed */
+            }
+            .recordings-section .space {
+                margin: auto; /* Center the element */
+                max-width: 600px; /* Adjust the maximum width as needed */
+                margin-top: 30px;
+            }
+
+            .recordings-section .space2 {
+                margin: auto; /* Center the element */
+                max-width: 600px; /* Adjust the maximum width as needed */
+                margin-top: 30px;
             }
 
             .audio-container {
@@ -151,20 +167,25 @@
                 text-align: center; /* Center the content inside the audio container */
             }
 
+            .recordings-section .recordstest {
+                margin-bottom: 30px;
+                margin-top: 70px;
+            }
+
+            .recordings-section .record {
+                margin-bottom: 30px;
+            }
+
+            .recordings-section .subt {
+                margin-top: 60px;
+            }
+
             @media (max-width: 768px) {
                 .audio-container {
                     width: 80%; /* Adjust the width for smaller screens */
                 }
                 img {
-                    position: absolute;
-                    max-width: 150px;
-                    margin: auto;
                     top: 30px;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-
-                    cursor: pointer;
-                    z-index: -1;
                 }
             }
         </style>
@@ -259,13 +280,15 @@
                 <!-- NEW SECTION: Our Recordings Tests -->
                 <section class="recordings-section">
                     <div class="container">
-                        <h2><span id="recordsTest"></span></h2>
-                        <p><span id="recordsTestsubt"></span></p>
+                        <h2 class="recordstest">
+                            <span id="recordsTest"></span>
+                        </h2>
+                        <p class="record"><span id="recordsTestsubt"></span></p>
 
                         <!-- Audio 1 -->
                         <div class="audio-container">
-                            <p>Audio 1 - Memakingbeats</p>
-                            <p><span id="diamontTest"></span></p>
+                            <p>Audio 1 - Memaking</p>
+                            <p class="space"><span id="diamontTest"></span></p>
                             <audio controls>
                                 <source
                                     src="../audios/Ranjizz - People.wav"
@@ -273,7 +296,7 @@
                                 />
                                 Your browser does not support the audio tag.
                             </audio>
-                            <p><span id="carbideTest"></span></p>
+                            <p class="space2"><span id="carbideTest"></span></p>
                             <audio controls>
                                 <source
                                     src="../audios/Ranjizz - Preference.wav"
@@ -285,8 +308,8 @@
 
                         <!-- Audio 2 -->
                         <div class="audio-container">
-                            <p>Audio 2 - Ranjizz</p>
-                            <p><span id="diamontTest2"></span></p>
+                            <p class="subt">Audio 2 - Ranjizz</p>
+                            <p class="space"><span id="diamontTest2"></span></p>
                             <audio controls>
                                 <source
                                     src="../audios/Ranjizz - Roll.wav"
@@ -294,7 +317,9 @@
                                 />
                                 Your browser does not support the audio tag.
                             </audio>
-                            <p><span id="carbideTest2"></span></p>
+                            <p class="space2">
+                                <span id="carbideTest2"></span>
+                            </p>
                             <audio controls>
                                 <source
                                     src="../audios/Ranjizz - Sunday.wav"
@@ -305,8 +330,8 @@
                         </div>
                         <!-- Audio 3 -->
                         <div class="audio-container">
-                            <p>Audio 3 - Fabio Ape</p>
-                            <p><span id="diamontTest3"></span></p>
+                            <p class="subt">Audio 3 - Fabio Ape</p>
+                            <p class="space"><span id="diamontTest3"></span></p>
                             <audio controls>
                                 <source
                                     src="../audios/Ranjizz - ZzZ.wav"
@@ -314,7 +339,9 @@
                                 />
                                 Your browser does not support the audio tag.
                             </audio>
-                            <p><span id="carbideTest3"></span></p>
+                            <p class="space2">
+                                <span id="carbideTest3"></span>
+                            </p>
                             <audio controls>
                                 <source
                                     src="../audios/Ranjizz -BR48-.wav"
