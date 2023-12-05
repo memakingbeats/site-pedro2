@@ -8,6 +8,7 @@
         <meta name="keywords" content="JC Record Lathes, Rotary" />
         <meta property="og:title" content="JC Record Lathes website" />
         <meta property="og:type" content="website" />
+
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -16,6 +17,10 @@
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         />
+
+        <script src="/languages/language-en.js"></script>
+        <script src="/languages/language-pt.js"></script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -44,7 +49,7 @@
 
             img {
                 position: absolute;
-                max-width: 70px;
+                max-width: 150px;
                 margin: auto;
                 top: 60%;
                 left: 50%;
@@ -62,6 +67,7 @@
                 transition-duration: 2s;
                 animation-timing-function: ease-in-out;
                 animation-delay: 2s;
+                font-size: 14px;
             }
 
             .container .row .collapse a:hover {
@@ -86,7 +92,25 @@
 
             .contato {
                 color: black;
-                text-align: justify;
+            }
+            /* Adjust the styles for the contact section */
+            .contact-section {
+                margin-top: 200px;
+            }
+
+            /* Style the icons section */
+            .icons-section {
+                margin-top: 20px; /* Adjust as needed */
+            }
+
+            .icons-section .icons {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .icons-section .icons a {
+                text-decoration: none;
+                color: rgb(36, 39, 38);
             }
 
             @media (max-width: 768px) {
@@ -104,7 +128,7 @@
                         <!-- Logo on the right side -->
                         <div class="col-md-6 text-center text-md-right">
                             <img
-                                src="../imagens/bitmap.png"
+                                src="../imagens/southincuts2.png"
                                 alt="JC"
                                 class="logo"
                             />
@@ -130,59 +154,72 @@
                                             <a
                                                 class="nav-link"
                                                 href="../back.html"
-                                                >HOME</a
-                                            >
+                                                ><span id="home"></span
+                                            ></a>
                                         </li>
                                         <li class="nav-item">
                                             <a
                                                 class="nav-link"
                                                 href="../lathe/lathe.html"
-                                                >RECORD LATHES</a
-                                            >
+                                                ><span id="lathe"></span
+                                            ></a>
                                         </li>
                                         <li class="nav-item">
                                             <a
                                                 class="nav-link"
-                                                href="../rotary/rotary.html"
-                                                >ROTARY</a
-                                            >
+                                                href="../Styli/styli.html"
+                                                ><span id="styli"></span
+                                            ></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="../blanks/blanks.html"
+                                                ><span id="blanks"></span
+                                            ></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="../records/records.html"
+                                                ><span id="records"></span
+                                            ></a>
                                         </li>
                                         <li class="nav-item">
                                             <a
                                                 class="nav-link"
                                                 href="contact.html"
-                                                >CONTACT</a
-                                            >
+                                                ><span id="contact"></span
+                                            ></a>
                                         </li>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
                     </div>
+                    <!-- Language Selection Dropdown -->
+                    <div class="language-dropdown">
+                        <label for="language"></label>
+                        <select id="language" onchange="changeLanguage()">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="pt">🇧🇷 Português</option>
+                        </select>
+                    </div>
                 </header>
+
                 <!-- FOOTER -->
                 <footer class="text-light py-4">
                     <div class="container-fluid">
                         <div class="row" id="contato-section">
-                            <div class="col-md-3 contato">
-                                <h4>CONTATO</h4>
+                            <div class="col-md-12 contato contact-text">
+                                <h4><span id="contact2"></span></h4>
                                 <p>
-                                    Entre em contato conosco e ficaremos felizes
-                                    em esclarecer todas as suas dúvidas sobre os
-                                    nossos equipamentos. Nossos mixers rotativos
-                                    e nossos tornos de gravação estão à
-                                    disposição, prontos para atender às suas
-                                    necessidades. Não hesite em nos contatar
-                                    para obter informações detalhadas sobre como
-                                    nossos produtos podem melhorar a qualidade e
-                                    eficiência do seu trabalho. Estamos ansiosos
-                                    para ajudá-lo a encontrar a solução perfeita
-                                    para os seus projetos.
+                                    <span id="contacttext"></span>
                                 </p>
                             </div>
                             <!-- Second Column - WhatsApp Icon -->
                             <div
-                                class="col-md-3 icons d-flex flex-column align-items-center justify-content-center my-column-padding"
+                                class="col-md-4 icons d-flex flex-column align-items-center justify-content-center my-column-padding"
                             >
                                 <a
                                     href="https://wa.me/554799934162"
@@ -197,28 +234,22 @@
                             </div>
                             <!-- Third Column - Phone Icon -->
                             <div
-                                class="col-md-3 icons d-flex flex-column align-items-center justify-content-center my-column-padding"
+                                class="col-md-4 icons d-flex flex-column align-items-center justify-content-center my-column-padding"
                             >
-                                <div
-                                    class="col-md-3 icons d-flex flex-column align-items-center justify-content-center my-column-padding"
+                                <a
+                                    href="https://wa.me/554799934162"
+                                    target="_blank"
                                 >
-                                    <a
-                                        href="https://wa.me/554799934162"
-                                        target="_blank"
-                                    >
-                                        <i
-                                            class="fas fa-phone-alt fa-2x mb-2"
-                                            style="color: rgb(36, 39, 38)"
-                                        ></i>
-                                    </a>
-                                    <p style="color: rgb(36, 39, 38)">
-                                        Televendas
-                                    </p>
-                                </div>
+                                    <i
+                                        class="fas fa-phone-alt fa-2x mb-2"
+                                        style="color: rgb(36, 39, 38)"
+                                    ></i>
+                                </a>
+                                <p style="color: rgb(36, 39, 38)">Televendas</p>
                             </div>
 
                             <div
-                                class="col-md-3 icons d-flex flex-column align-items-center justify-content-center my-column-padding"
+                                class="col-md-4 icons d-flex flex-column align-items-center justify-content-center my-column-padding"
                             >
                                 <a
                                     href="mailto:cafestg@gmail.com"
@@ -247,6 +278,86 @@
                     </div>
                 </div>
             </div>
+            <!-- New Section: Address and Map -->
+            <section class="address-map-section">
+                <div class="container">
+                    <div class="row">
+                        <!-- Address Column -->
+                        <div class="col-md-6">
+                            <h2>Our Address</h2>
+                            <p>
+                                123 Main Street, Cityville, Country
+                                <br />
+                                Zip Code: 12345
+                            </p>
+                        </div>
+
+                        <!-- Map Column -->
+                        <div class="col-md-6">
+                            <!-- You can embed a map here using an iframe from Google Maps or another service -->
+                            <!-- Example using Google Maps iframe -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d220.7728197020596!2d-48.53448488520066!3d-27.706011032646956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQyJzIxLjYiUyA0OMKwMzInMDMuOSJX!5e1!3m2!1spt-BR!2sbr!4v1701797449061!5m2!1spt-BR!2sbr"
+                                width="600"
+                                height="450"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <script>
+            function changeLanguage() {
+                var selectedLanguage =
+                    document.getElementById("language").value;
+
+                // Update the content based on the selected language
+                switch (selectedLanguage) {
+                    case "en":
+                        updateContent(translationsEn);
+                        break;
+                    case "pt":
+                        updateContent(translationsPt);
+                        break;
+                    default:
+                        break;
+                }
+
+                // Store the selected language preference
+                localStorage.setItem("userLanguage", selectedLanguage);
+            }
+
+            function updateContent(translations) {
+                document.getElementById("home").textContent = translations.home;
+                document.getElementById("lathe").textContent =
+                    translations.lathe;
+                document.getElementById("styli").textContent =
+                    translations.styli;
+                document.getElementById("blanks").textContent =
+                    translations.blanks;
+                document.getElementById("records").textContent =
+                    translations.records;
+                document.getElementById("contact").textContent =
+                    translations.contact;
+                document.getElementById("contact2").textContent =
+                    translations.contact2;
+                document.getElementById("contacttext").textContent =
+                    translations.contacttext;
+            }
+
+            // Retrieve the user's language preference from storage
+            var storedLanguage = localStorage.getItem("userLanguage");
+
+            // Set the default language to Portuguese or the stored preference
+            document.getElementById("language").value = storedLanguage || "pt";
+
+            // Trigger the language change when the page loads
+            changeLanguage();
+        </script>
     </body>
 </html>

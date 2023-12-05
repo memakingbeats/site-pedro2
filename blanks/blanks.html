@@ -16,12 +16,13 @@
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         />
+        <script src="/languages/language-en.js"></script>
+        <script src="/languages/language-pt.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <title>JC Record Lathes</title>
         <style>
             * {
                 margin: 0;
@@ -44,7 +45,7 @@
 
             img {
                 position: absolute;
-                max-width: 70px;
+                max-width: 150px;
                 margin: auto;
                 top: 60%;
                 left: 50%;
@@ -56,12 +57,13 @@
 
             .container .row .collapse a {
                 text-decoration: none;
-                color: rgb(8, 0, 0);
+                color: #080000;
                 margin-right: 20px;
                 transition-property: background-color, letter-spacing;
                 transition-duration: 2s;
                 animation-timing-function: ease-in-out;
                 animation-delay: 2s;
+                font-size: 14px;
             }
 
             .container .row .collapse a:hover {
@@ -111,6 +113,29 @@
                 border: none;
             }
 
+            .language-dropdown {
+                top: 40px;
+                right: 0px;
+                display: flex;
+                align-items: center;
+                z-index: 100; /* Adjust the value as needed */
+            }
+
+            .language-dropdown label {
+                margin-right: 10px;
+            }
+
+            .language-dropdown select {
+                appearance: none;
+                padding: 5px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background: url("https://emojicombos.com/") no-repeat right
+                    center;
+                background-size: 20px;
+                cursor: pointer;
+            }
+
             @media (max-width: 768px) {
                 .container .row .big-image {
                     margin-top: 180px;
@@ -130,14 +155,14 @@
                 }
 
                 .container .row .small-image {
-                    margin-top: 420px;
+                    margin-top: 400px;
                 }
                 .container .row .big-image2 {
                     margin-top: 160px;
                 }
 
                 .container .row .small-image2 {
-                    margin-top: 420px;
+                    margin-top: 400px;
                 }
 
                 img {
@@ -149,6 +174,7 @@
                 }
             }
         </style>
+        <title>JC Record Lathes</title>
     </head>
     <body>
         <main id="full">
@@ -158,7 +184,7 @@
                         <!-- Logo on the right side -->
                         <div class="col-md-6 text-center text-md-right">
                             <img
-                                src="../imagens/bitmap.png"
+                                src="../imagens/southincuts2.png"
                                 alt="JC"
                                 class="logo"
                             />
@@ -184,71 +210,79 @@
                                             <a
                                                 class="nav-link"
                                                 href="../back.html"
-                                                >HOME</a
-                                            >
+                                                ><span id="home"></span
+                                            ></a>
                                         </li>
                                         <li class="nav-item">
                                             <a
                                                 class="nav-link"
                                                 href="../lathe/lathe.html"
-                                                >RECORD LATHES</a
-                                            >
+                                                ><span id="lathe"></span
+                                            ></a>
                                         </li>
                                         <li class="nav-item">
                                             <a
                                                 class="nav-link"
-                                                href="rotary.html"
-                                                >ROTARY</a
-                                            >
+                                                href="../Styli/styli.html"
+                                                ><span id="styli"></span
+                                            ></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="blanks.html"
+                                                ><span id="blanks"></span
+                                            ></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="../records/records.html"
+                                                ><span id="records"></span
+                                            ></a>
                                         </li>
                                         <li class="nav-item">
                                             <a
                                                 class="nav-link"
                                                 href="../contact/contact.html"
-                                                >CONTACT</a
-                                            >
+                                                ><span id="contact"></span
+                                            ></a>
                                         </li>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
                     </div>
+                    <!-- Language Selection Dropdown -->
+                    <div class="language-dropdown">
+                        <label for="language"></label>
+                        <select id="language" onchange="changeLanguage()">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="pt">🇧🇷 Português</option>
+                        </select>
+                    </div>
                 </header>
                 <div class="container">
                     <div class="row">
                         <!-- Left Column -->
                         <div class="col-lg-6 text">
-                            <h1>Rotary JS-70</h1>
+                            <h1>PETG FUMÊ</h1>
                             <p class="subt">
-                                O mixer rotary Rotary JS-70 é um equipamento de
-                                áudio altamente versátil e potente que se
-                                destaca pela sua capacidade de proporcionar
-                                mixagens sonoras excepcionais.
+                                <span id="petg"></span>
                             </p>
-                            <h4>Um clássico renascido</h4>
+                            <h4>
+                                <span id="subtitlePetg"></span>
+                            </h4>
                             <p>
-                                Com uma construção robusta e controles
-                                intuitivos, este dispositivo é ideal para
-                                profissionais da área de áudio que buscam um
-                                desempenho de alta qualidade. O Rotary JS-70
-                                oferece uma variedade de opções de ajuste de
-                                som, incluindo equalização precisa e controle de
-                                ganho, permitindo que os usuários alcancem um
-                                som perfeitamente equilibrado. Além disso, seu
-                                design compacto o torna uma escolha prática para
-                                estúdios de gravação, palcos de shows e
-                                aplicações de sonorização. Com o Rotary JS-70,
-                                os entusiastas da música e engenheiros de som
-                                podem elevar a qualidade das suas mixagens a um
-                                novo patamar, garantindo um som incrível em
-                                todas as situações.
+                                <span id="paragrafPetg"></span>
                             </p>
+
                             <a
                                 href="https://api.whatsapp.com/send?phone=554799934162"
                                 class="btn btn-primary"
                                 target="_blank"
-                                >COMPRAR</a
-                            >
+                                ><span id="botao"></span
+                            ></a>
                         </div>
 
                         <!-- Right Column -->
@@ -256,7 +290,7 @@
                             <!-- Big image with unique ID -->
                             <img
                                 id="bigImage"
-                                src="../imagens/rotar-removebg-preview.png"
+                                src="../imagens/blank1.png"
                                 alt="Product Image"
                                 class="img-fluid big-image"
                             />
@@ -265,21 +299,21 @@
                             <div class="row">
                                 <div class="col">
                                     <img
-                                        src="../imagens/rotar2-removebg-preview (1).png"
+                                        src="../imagens/blank2.webp"
                                         alt="Small Image 1"
                                         class="img-thumbnail small-image"
                                     />
                                 </div>
                                 <div class="col">
                                     <img
-                                        src="../imagens/rotar3-removebg-preview.png"
+                                        src="../imagens/blank3.png"
                                         alt="Small Image 2"
                                         class="img-thumbnail small-image"
                                     />
                                 </div>
                                 <div class="col">
                                     <img
-                                        src="../imagens/rotar4-removebg-preview.png"
+                                        src="../imagens/blank4.webp"
                                         alt="Small Image 3"
                                         class="img-thumbnail small-image"
                                     />
@@ -296,36 +330,20 @@
                     <div class="row">
                         <!-- Left Column -->
                         <div class="col-lg-6 text">
-                            <h1>Analog 4Chanel - Valvulado</h1>
+                            <h1>CRYSTAL</h1>
                             <p class="subt">
-                                Um amplificador analógico de 4 canais valvulado
-                                é uma peça de equipamento de áudio que evoca a
-                                nostalgia dos tempos dourados da música.
+                                <span id="crystal"></span>
                             </p>
-                            <h4>Um clássico renascido</h4>
-                            <p>
-                                Com válvulas de vácuo clássicas, este
-                                amplificador oferece um som quente e rico que é
-                                apreciado por músicos e audiófilos em todo o
-                                mundo. Cada um dos 4 canais proporciona uma
-                                paleta sonora única, permitindo uma ampla gama
-                                de experimentação e personalização sonora. A
-                                sutileza das válvulas contribui para uma
-                                saturação harmônica suave e uma resposta de
-                                dinâmica que é difícil de igualar com a
-                                tecnologia digital moderna. Um amplificador
-                                analógico de 4 canais valvulado é uma escolha
-                                preferida para guitarristas, músicos de estúdio
-                                e entusiastas da alta fidelidade que valorizam a
-                                autenticidade do som analógico e a singularidade
-                                desse equipamento clássico.
-                            </p>
+                            <h4>
+                                <span id="subtitleCrystal"></span>
+                            </h4>
+                            <p><span id="paragrafCrystal"></span></p>
                             <a
                                 href="https://api.whatsapp.com/send?phone=554799934162"
                                 class="btn btn-primary"
                                 target="_blank"
-                                >COMPRAR</a
-                            >
+                                ><span id="botao2"></span
+                            ></a>
                         </div>
 
                         <!-- Right Column -->
@@ -333,7 +351,7 @@
                             <!-- Big image with unique ID -->
                             <img
                                 id="bigImage2"
-                                src="../imagens/rotar-removebg-preview.png"
+                                src="../imagens/blank4.webp"
                                 alt="Product Image"
                                 class="img-fluid big-image2"
                             />
@@ -342,21 +360,21 @@
                             <div class="row">
                                 <div class="col">
                                     <img
-                                        src="../imagens/rotar2-removebg-preview (1).png"
+                                        src="../imagens/blank3.png"
                                         alt="Small Image 1"
                                         class="img-thumbnail small-image2"
                                     />
                                 </div>
                                 <div class="col">
                                     <img
-                                        src="../imagens/rotar3-removebg-preview.png"
+                                        src="../imagens/blank2.webp"
                                         alt="Small Image 2"
                                         class="img-thumbnail small-image2"
                                     />
                                 </div>
                                 <div class="col">
                                     <img
-                                        src="../imagens/rotar4-removebg-preview.png"
+                                        src="../imagens/blank1.png"
                                         alt="Small Image 3"
                                         class="img-thumbnail small-image2"
                                     />
@@ -391,6 +409,60 @@
             </div>
         </div>
     </body>
+
+    <script>
+        function changeLanguage() {
+            var selectedLanguage = document.getElementById("language").value;
+
+            // Update the content based on the selected language
+            switch (selectedLanguage) {
+                case "en":
+                    updateContent(translationsEn);
+                    break;
+                case "pt":
+                    updateContent(translationsPt);
+                    break;
+                default:
+                    break;
+            }
+
+            // Store the selected language preference
+            localStorage.setItem("userLanguage", selectedLanguage);
+        }
+
+        function updateContent(translations) {
+            document.getElementById("home").textContent = translations.home;
+            document.getElementById("lathe").textContent = translations.lathe;
+            document.getElementById("styli").textContent = translations.styli;
+            document.getElementById("blanks").textContent = translations.blanks;
+            document.getElementById("records").textContent =
+                translations.records;
+            document.getElementById("contact").textContent =
+                translations.contact;
+            document.getElementById("petg").textContent = translations.petg;
+            document.getElementById("subtitlePetg").textContent =
+                translations.subtitlePetg;
+            document.getElementById("paragrafPetg").textContent =
+                translations.paragrafPetg;
+            document.getElementById("botao").textContent = translations.botao;
+            document.getElementById("crystal").textContent =
+                translations.crystal;
+            document.getElementById("subtitleCrystal").textContent =
+                translations.subtitleCrystal;
+            document.getElementById("paragrafCrystal").textContent =
+                translations.paragrafCrystal;
+            document.getElementById("botao2").textContent = translations.botao2;
+        }
+
+        // Retrieve the user's language preference from storage
+        var storedLanguage = localStorage.getItem("userLanguage");
+
+        // Set the default language to Portuguese or the stored preference
+        document.getElementById("language").value = storedLanguage || "pt";
+
+        // Trigger the language change when the page loads
+        changeLanguage();
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // JavaScript for image swapping

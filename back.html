@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,6 +18,8 @@
             integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
             crossorigin="anonymous"
         ></script>
+        <script src="/languages/language-en.js"></script>
+        <script src="/languages/language-pt.js"></script>
         <title>JC Record Lathes</title>
 
         <style>
@@ -42,9 +44,9 @@
 
             img {
                 position: absolute;
-                max-width: 450px;
+                max-width: 550px;
                 margin: auto;
-                top: 30%;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%, -50%);
 
@@ -164,6 +166,29 @@
                 }
             }
 
+            .language-dropdown {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                align-items: center;
+                z-index: 100; /* Adjust the value as needed */
+            }
+
+            .language-dropdown label {
+                margin-right: 10px;
+            }
+
+            .language-dropdown select {
+                appearance: none;
+                padding: 5px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background: url("https://emojicombos.com/") no-repeat right
+                    center;
+                background-size: 20px;
+                cursor: pointer;
+            }
             @media (max-width: 768px) {
                 img {
                     width: 300px;
@@ -176,14 +201,39 @@
             <div class="container">
                 <header>
                     <div class="logo">
-                        <img src="imagens/bitmap.png" alt="Pedro Floriani" />
+                        <img
+                            src="imagens/southincuts2.png"
+                            alt="Pedro Floriani"
+                        />
                     </div>
 
+                    <!-- Update the nav.menu section in your HTML -->
                     <nav class="menu">
-                        <p><a href="back.html">HOME</a></p>
-                        <p><a href="lathe/lathe.html">RECORD LATHES</a></p>
-                        <p><a href="rotary/rotary.html">ROTARY</a></p>
-                        <p><a href="contact/contact.html">CONTACT</a></p>
+                        <p>
+                            <a href="lathe/lathe.html"
+                                ><span id="lathe"></span
+                            ></a>
+                        </p>
+                        <p>
+                            <a href="Styli/styli.html"
+                                ><span id="styli"></span
+                            ></a>
+                        </p>
+                        <p>
+                            <a href="blanks/blanks.html"
+                                ><span id="blanks"></span
+                            ></a>
+                        </p>
+                        <p>
+                            <a href="records/records.html"
+                                ><span id="records"></span
+                            ></a>
+                        </p>
+                        <p>
+                            <a href="contact/contact.html"
+                                ><span id="contact"></span
+                            ></a>
+                        </p>
                     </nav>
                     <nav class="socialmedia">
                         <a
@@ -197,6 +247,14 @@
                             ><i class="fab fa-facebook"></i
                         ></a>
                     </nav>
+                    <!-- Language Selection Dropdown -->
+                    <div class="language-dropdown">
+                        <label for="language"></label>
+                        <select id="language" onchange="changeLanguage()">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="pt">🇧🇷 Português</option>
+                        </select>
+                    </div>
                 </header>
                 <div class="bubbles">
                     <span style="--i: 0.9"></span>
@@ -286,5 +344,49 @@
                 </div>
             </div>
         </main>
+
+        <script>
+            function changeLanguage() {
+                var selectedLanguage =
+                    document.getElementById("language").value;
+
+                // Update the content based on the selected language
+                switch (selectedLanguage) {
+                    case "en":
+                        updateContent(translationsEn);
+                        break;
+                    case "pt":
+                        updateContent(translationsPt);
+                        break;
+                    default:
+                        break;
+                }
+
+                // Store the selected language preference
+                localStorage.setItem("userLanguage", selectedLanguage);
+            }
+
+            function updateContent(translations) {
+                document.getElementById("lathe").textContent =
+                    translations.lathe;
+                document.getElementById("styli").textContent =
+                    translations.styli;
+                document.getElementById("blanks").textContent =
+                    translations.blanks;
+                document.getElementById("records").textContent =
+                    translations.records;
+                document.getElementById("contact").textContent =
+                    translations.contact;
+            }
+
+            // Retrieve the user's language preference from storage
+            var storedLanguage = localStorage.getItem("userLanguage");
+
+            // Set the default language to Portuguese or the stored preference
+            document.getElementById("language").value = storedLanguage || "pt";
+
+            // Trigger the language change when the page loads
+            changeLanguage();
+        </script>
     </body>
 </html>
