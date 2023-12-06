@@ -45,53 +45,25 @@
                 color: black;
             }
 
-            .contact-container {
-                margin-top: 200px;
-            }
+            
 
-            .contact-container p {
-                margin-top: 120px;
-                margin-right: 40px;
-                text-align: justify;
-                letter-spacing: 2px;
-            }
+           
 
-            .container-fluid {
-                margin-top: 200px;
+            .container-fluid .icons {
+                margin-top: 70px;
             }
 
             .contato {
                 color: black;
-                background-color: aquamarine;
             }
-            /* Adjust the styles for the contact section */
-            .contact-section {
-                margin-top: 100px;
-            }
+            
 
-            /* Style the icons section */
-            .icons-section {
-                margin-top: 20px; /* Adjust as needed */
-                background-color: blue;
-            }
-
-            .icons-section .icons {
-                display: flex;
-                justify-content: space-around;
-            }
-
-            .icons-section .icons a {
-                text-decoration: none;
-                color: rgb(36, 39, 38);
-            }
-
-            .address-container {
-    margin-top: 200px; /* Adjust the value as needed */
+           
+            
+.address-map-section{
+    
+    margin-top: -20rem;
 }
-           .contact-text p{
-                    text-align: justify;
-                   
-                }
 
             @media (max-width: 991px) {
                 img {
@@ -99,8 +71,41 @@
                 }
 
                 .mapa{
-                    width: 100vw;
+                    width: 90vw;
+                }
+.container{
+ height: 120vh;
+
+}
+                .container .contato{
+                    color: black;
+                margin-top: 0rem;
+                
+                
                 }
 
+            
+            .container .address {
+                padding: 10px;
+               
+                
+
+            }
+            .container .contato {
+                padding: 10px;
+            }
+
+            .container .icons{
+                
+                margin-top: 0rem;
+            }
+
+          
+
+            
+.address-map-section{
+    
+    margin-top: 20rem;
+}
                 
             }
