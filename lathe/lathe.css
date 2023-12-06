@@ -114,40 +114,32 @@
             }
 
             @media (max-width: 768px) {
-                .container .row .big-image {
-                    margin-top: 180px;
-                    cursor: pointer !important;
-                    z-index: 2;
-                }
+                
 
                 .container {
-                    position: relative;
-                    width: 100vw;
-                    height: 150vh !important;
-                    overflow: hidden;
+                    padding: 10px;
+                    
                 }
 
                 .container .row .big-image {
-                    margin-top: 160px;
+                    
                 }
 
+
                 .container .row .small-image {
-                    margin-top: 400px;
+                    
                 }
                 .container .row .big-image2 {
-                    margin-top: 160px;
+                   
                 }
 
                 .container .row .small-image2 {
-                    margin-top: 400px;
+                    
                 }
 
                 img {
-                    top: 30px;
+                    
                 }
-                .container .row .text {
-                    margin-top: 80px;
-                    font-size: smaller;
-                }
+                
             }
         

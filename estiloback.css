@@ -171,7 +171,7 @@
     top: 85%; /* Adjust the vertical position as needed */
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 70%; /* Adjust the maximum width as needed */
+    max-width: 80%; /* Adjust the maximum width as needed */
     text-align: justify;
     padding: 20px; /* Add padding as needed */
     background-color: rgba(255, 255, 255, 0.8); /* Add a background color with some transparency */
@@ -182,7 +182,7 @@
 
 
 
-@media screen and (min-width: 320px) and (max-width: 450px) {
+@media screen and (min-width: 0px) and (max-width: 450px) {
                     
             
 
@@ -204,7 +204,7 @@
                 
             }
             .work-description {
-                    top: 75%; /* Adjust the vertical position as needed */
+                    
                     
                     width: 100%; /* Adjust the maximum width as needed */
                 }
@@ -217,6 +217,7 @@
 
             @media screen and (min-width: 451px) and (max-width: 768px) {
                 
+            
             img {
                     width: 300px;
                     top: 20%;
@@ -235,7 +236,7 @@
                 
             }
             .work-description {
-                    top: 65%; /* Adjust the vertical position as needed */
+                    
                     
                     width: 100%; /* Adjust the maximum width as needed */
                 }
