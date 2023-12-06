@@ -1,0 +1,149 @@
+* {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            body {
+                min-height: 100vh;
+                background-color: white;
+            }
+
+            .container {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            img {
+                position: absolute;
+                max-width: 150px;
+                margin: auto;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                cursor: pointer;
+                z-index: -1;
+            }
+
+            .container .row .collapse a {
+                text-decoration: none;
+                color: #080000;
+                margin-right: 20px;
+                transition-property: background-color, letter-spacing;
+                transition-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 2s;
+                font-size: 14px;
+            }
+
+            .container .row .collapse a:hover {
+                letter-spacing: 2px;
+                color: black;
+            }
+
+            .container .row .big-image {
+                margin-top: 30px;
+                cursor: pointer !important;
+                z-index: 2;
+            }
+
+            .container .row .small-image {
+                margin-top: 750px;
+
+                cursor: pointer !important;
+                z-index: 2;
+                border: none;
+            }
+
+            .container .row .text {
+                margin-top: 180px;
+                font-size: smaller;
+            }
+
+            .container .row .text .subt {
+                margin-bottom: 50px;
+            }
+
+            .container .row .text h4,
+            h1 {
+                font-weight: bold;
+            }
+
+            .container .row .big-image2 {
+                margin-top: 30px;
+                cursor: pointer !important;
+                z-index: 2;
+            }
+
+            .container .row .small-image2 {
+                margin-top: 750px;
+
+                cursor: pointer !important;
+                z-index: 2;
+                border: none;
+            }
+
+            .language-dropdown {
+                top: 40px;
+                right: 0px;
+                display: flex;
+                align-items: center;
+                z-index: 100; /* Adjust the value as needed */
+            }
+
+            .language-dropdown label {
+                margin-right: 10px;
+            }
+
+            .language-dropdown select {
+                appearance: none;
+                padding: 5px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background: url("https://emojicombos.com/") no-repeat right
+                    center;
+                background-size: 20px;
+                cursor: pointer;
+            }
+
+            @media (max-width: 768px) {
+                .container .row .big-image {
+                    margin-top: 180px;
+                    cursor: pointer !important;
+                    z-index: 2;
+                }
+
+                .container {
+                    position: relative;
+                    width: 100vw;
+                    height: 150vh !important;
+                    overflow: hidden;
+                }
+
+                .container .row .big-image {
+                    margin-top: 160px;
+                }
+
+                .container .row .small-image {
+                    margin-top: 400px;
+                }
+                .container .row .big-image2 {
+                    margin-top: 160px;
+                }
+
+                .container .row .small-image2 {
+                    margin-top: 400px;
+                }
+
+                img {
+                    top: 30px;
+                }
+                .container .row .text {
+                    margin-top: 80px;
+                    font-size: smaller;
+                }
+            }

@@ -29,5 +29,45 @@
 
                 botao2: "ORDER IT",
 
+                titleDiamond:
+                    "Precision Crafting and Sonic Excellence with Diamond Stylus Technology",
+
+                subtitleDiamond: "Precision",
+
+                paragrafDiamond:
+                    "Delve into a world of unparalleled precision and sonic purity with the Diamond Stylus for cutting and recording lathes. This meticulously crafted tool serves a dual purpose, delicately cutting through plastic surfaces and subsequently capturing music with minimal surface noise. Crafted by the skilled professionals at JC Audio, our trusted partner in delivering top-notch audio equipment, these diamond stylus needles epitomize the intersection of craftsmanship and innovation. Elevate your audio experience as you embrace the seamless fusion of cutting-edge technology and the artistry of sound.",
+
+                titleCrabide:
+                    "Tungsten Carbide Brilliance: Unleashing Precision in Embossing and Cutting",
+
+                subtitleCarbide: "Embossing and Cutting",
+
+                paragrafCarbide:
+                    "Unlock a realm of precision and durability with our Tungsten Carbide stylus, a true marvel in the world of embossing and precision cutting. Not only reserved for creating mesmerizing embossed patterns, but this tungsten carbide variant is also expertly honed to sharpen our stylus, ensuring impeccable precision when cutting through discs. This is particularly evident when paired with our soft blanks, allowing for a seamless convergence of strength and finesse. Experience the pinnacle of craftsmanship and innovation as our tungsten carbide stylus redefines the boundaries of embossing and cutting in the world of audio production.",
+
+                petg: "The Elegance of Vinyl: PETG Smoked Blank Discs for Diamond and Carbide Stylus Precision",
+
+                subtitlePetg: "PETG Smoked Blank",
+
+                paragrafPetg:
+                    "Step into a realm of audio finesse with our PETG Smoked Blank Vinyl Discs—crafted for excellence in both diamond and carbide stylus precision. Specially formulated for cutting with diamond needles and compatible with our carbide stylus as well, our PETG boasts exceptional quality and smoothness. These discs, created as a single piece, epitomize the seamless convergence of durability and sonic artistry. DJs, in particular, appreciate the significance of the smoked PETG disc, as it not only enhances the visual allure of vinyl but also ensures impeccable sound reproduction. The unique combination of high-quality material and one-piece construction makes these discs an essential choice for DJs seeking both style and precision in their vinyl performances. Immerse yourself in the rich, analog allure of vinyl records produced on these exceptional PETG blanks, and elevate your DJ experience to new heights.",
+
+                crystal:
+                    "Crystal Clarity and Sonic Smoothness: Blank Crystal Vinyl Discs for Unparalleled Elegance",
+
+                subtitleCrystal: " Crystal Blank",
+
+                paragrafCrystal:
+                    "Indulge in the epitome of elegance and smooth sonic performance with our Blank Crystal Vinyl Discs. Crafted to perfection, these discs are designed for precision with both diamond and carbide styluses. The exceptional clarity of our crystal blanks adds a touch of sophistication to your vinyl collection, ensuring a visual and auditory experience that transcends expectations. The material's inherent smoothness enhances the overall sound quality, making each note resonate with clarity and finesse. DJs, in particular, appreciate the unparalleled elegance and smoothness of our Crystal Blank Discs, as they contribute to seamless mixes and an immersive auditory journey. Elevate your vinyl experience with the luxurious combination of crystal clarity and sonic smoothness that defines our Blank Crystal Vinyl Discs.",
+
+                    diamontTest: "Diamond Stylus",
+                diamontTest2: "Diamond Stylus",
+                diamontTest3: "Diamond Stylus",
+                recordsTest: "Our Recordings Tests",
+                recordsTestsubt:
+                    "These are the test cuts we did to showcase the quality of our cuts.",
+                carbideTest: "Carbide Stylus",
+                carbideTest2: "Carbide Stylus",
+                carbideTest3: "Carbide Stylus",
                 
             };
