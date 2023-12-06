@@ -1,7 +1,7 @@
 // language-pt.js
             const translationsPt = {
                 home: "HOME",
-                lathe: "TORNOS",
+                lathe: "TORNOSxxx",
                 styli: "AGULHAS",
                 blanks: "DISCOS",
                 records: "CORTES",
