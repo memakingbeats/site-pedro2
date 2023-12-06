@@ -1,7 +1,7 @@
  // language-en.js
             const translationsEn = {
                 home: "HOME",
-                lathe: "LATHES",
+                lathe: "LATHESxxx",
                 styli: "STYLI",
                 blanks: "BLANKS",
                 records: "RECORDS",
