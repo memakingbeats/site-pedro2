@@ -186,4 +186,20 @@
                 img {
                     width: 300px;
                 }
+
+              .work-description {
+    
+    top: 88%; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust the maximum width as needed */
+    
+}
+.container {
+                
+                height: 130vh;
+                
+                margin-top: -290px !important;
+            }
+                
             }
