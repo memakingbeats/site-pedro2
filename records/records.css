@@ -13,8 +13,10 @@
             .container {
                 position: relative;
                 width: 100vw;
-                height: 150vh;
+                height: 190vh;
                 overflow: hidden;
+                padding: 0;
+        
             }
 
             img {
@@ -103,6 +105,7 @@
             .recordings-section .recordstest {
                 margin-bottom: 30px;
                 margin-top: 70px;
+                
             }
 
             .recordings-section .record {
@@ -111,6 +114,7 @@
 
             .recordings-section .subt {
                 margin-top: 60px;
+                
             }
 
             .audio-container audio {

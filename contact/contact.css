@@ -62,15 +62,17 @@
 
             .contato {
                 color: black;
+                background-color: aquamarine;
             }
             /* Adjust the styles for the contact section */
             .contact-section {
-                margin-top: 200px;
+                margin-top: 100px;
             }
 
             /* Style the icons section */
             .icons-section {
                 margin-top: 20px; /* Adjust as needed */
+                background-color: blue;
             }
 
             .icons-section .icons {
@@ -83,8 +85,22 @@
                 color: rgb(36, 39, 38);
             }
 
-            @media (max-width: 768px) {
+            .address-container {
+    margin-top: 200px; /* Adjust the value as needed */
+}
+           .contact-text p{
+                    text-align: justify;
+                   
+                }
+
+            @media (max-width: 991px) {
                 img {
                     top: 30px;
                 }
+
+                .mapa{
+                    width: 100vw;
+                }
+
+                
             }
