@@ -168,7 +168,7 @@
 
             .work-description {
     position: absolute;
-    top: 90%; /* Adjust the vertical position as needed */
+    top: 85%; /* Adjust the vertical position as needed */
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 70%; /* Adjust the maximum width as needed */

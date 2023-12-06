@@ -11,12 +11,7 @@
                 background-color: white;
             }
 
-            .container {
-                position: relative;
-                width: 100vw;
-                height: 100vh;
-                overflow: hidden;
-            }
+            
 
             img {
                 position: absolute;
@@ -68,6 +63,8 @@
             .container .row .text {
                 margin-top: 180px;
                 font-size: smaller;
+                background-color: aqua;
+                text-align: justify;
             }
 
             .container .row .text .subt {
