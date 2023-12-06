@@ -16,7 +16,6 @@
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         />
-
         <link rel="stylesheet" href="./lathe.css" />
 
         <script src="../languages/language-en.js"></script>
@@ -118,7 +117,7 @@
                     <div class="row">
                         <!-- Left Column -->
                         <div class="col-lg-6 text">
-                            <h1>SVR-84xxxx</h1>
+                            <h1>SVR-84</h1>
                             <p class="subt">
                                 <span id="SVR84"></span>
                             </p>
@@ -133,7 +132,7 @@
                                 href="https://api.whatsapp.com/send?phone=554799934162"
                                 class="btn btn-primary"
                                 target="_blank"
-                                ><span id="botao"></span
+                                ><span id="latheContact"></span
                             ></a>
                         </div>
 
@@ -194,7 +193,7 @@
                                 href="https://api.whatsapp.com/send?phone=554799934162"
                                 class="btn btn-primary"
                                 target="_blank"
-                                ><span id="botao2"></span
+                                ><span id="latheContact2"></span
                             ></a>
                         </div>
 
@@ -296,13 +295,15 @@
                 translations.subtitle;
             document.getElementById("paragraf").textContent =
                 translations.paragraf;
-            document.getElementById("botao").textContent = translations.botao;
+            document.getElementById("latheContact").textContent =
+                translations.latheContact;
             document.getElementById("SVR82").textContent = translations.SVR82;
             document.getElementById("subtitle2").textContent =
                 translations.subtitle2;
             document.getElementById("paragraf2").textContent =
                 translations.paragraf2;
-            document.getElementById("botao2").textContent = translations.botao2;
+            document.getElementById("latheContact2").textContent =
+                translations.latheContact2;
         }
 
         // Retrieve the user's language preference from storage

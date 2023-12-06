@@ -7,6 +7,9 @@
                 records: "CORTES",
                 contact: "CONTATO",
                 contact2: "CONTATO",
+                latheContact:"Entre em Contato",
+                latheContact2:"Entre em Contato",
+                description:"South.in Cuts é uma fornecedora de matéria-prima para tornos. Fornecemos máquinas de corte, agulhas e discos em branco (blanks). Além disso, oferecemos serviços de gravação em discos com materiais de alta qualidade e soluções personalizadas para suas necessidades de usinagem e gravação.",
 
                 contacttext:
                     "Entre em contato conosco e ficaremos felizes em esclarecer todas as suas dúvidas sobre os nossos equipamentos. Nossos mixers rotativos e nossos tornos de gravação estão à disposição, prontos para atender às suas necessidades. Não hesite em nos contatar para obter informações detalhadas sobre como nossos produtos podem melhorar a qualidade e eficiência do seu trabalho. Estamos ansiosos para ajudá-lo a encontrar a solução perfeita para os seus projetos.",

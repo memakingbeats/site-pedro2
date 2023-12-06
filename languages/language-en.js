@@ -1,12 +1,15 @@
  // language-en.js
             const translationsEn = {
                 home: "HOME",
-                lathe: "LATHESxxx",
+                lathe: "LATHES",
                 styli: "STYLI",
                 blanks: "BLANKS",
                 records: "RECORDS",
                 contact: "CONTACT",
                 contact2: "CONTACT",
+                latheContact:"Contact Us",
+                latheContact2:"Contact Us",
+                description:"South.in Cuts is a supplier of raw materials for lathes. We provide cutting machines, needles, and blank discs. Additionally, we offer disc engraving services with your personalized music. Get in touch with us to acquire high-quality materials and customized solutions for your machining and recording needs.",
 
                 contacttext:
                     "Contact us, and we will be happy to address all your inquiries about our equipment. Our rotary mixers and recording lathes are available, ready to meet your needs. Feel free to reach out to us for detailed information on how our products can enhance the quality and efficiency of your work. We look forward to assisting you in finding the perfect solution for your projects.",
