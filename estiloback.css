@@ -189,21 +189,23 @@
 
               .work-description {
     
-    top: 80%; /* Adjust the vertical position as needed */
+    top: 85%; /* Adjust the vertical position as needed */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%; /* Adjust the maximum width as needed */
     
 }
-.container {
+   
+            body {
+                min-height: 130vh;
+                
+            }
+
+            .container{
                 
                 height: 130vh;
+                margin-top: -30vh;
                 
-                margin-top: -90px !important;
-            }
-            body {
-                min-height: 140vh;
-                background-color: white;
             }
                 
             }
