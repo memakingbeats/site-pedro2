@@ -55,14 +55,22 @@
 
             .contato {
                 color: black;
+                margin-top: 2rem;
+                
+                
             }
             
+            .textContact{
+                text-align: justify;
+                
+            }
 
            
             
 .address-map-section{
     
     margin-top: -20rem;
+    
 }
 
             @media (max-width: 991px) {
@@ -87,6 +95,7 @@
             
             .container .address {
                 padding: 10px;
+                
                
                 
 
